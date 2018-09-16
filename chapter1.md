@@ -3,7 +3,7 @@ title: 'Week 1'
 description: 'Welcome! We will use this platform in the next few weeks for syntax-oriented homeworks, so that you can practice what we have learned in R.'
 ---
 
-## The author of R## A numeric function
+## A numeric function
 
 ```yaml
 type: MultipleChoiceExercise
