@@ -198,6 +198,12 @@ Generate a sequence between `0` and `4*pi` with a step of `0.1`. Store the resul
 `@hint`
 Use the `seq` function. Check the manual via `?seq` for more details.
 
+
+`@pre_exercise_code`
+```{r}
+rm(x)
+```
+
 `@solution`
 ```{r}
 x <- seq(0, 4*pi, by = 0.1)
@@ -212,4 +218,149 @@ ex() %>% check_function("seq") %>% {
 ex() %>% check_object("x") %>% check_equal()
 ```
 
+
+---
+
+## Draw functions
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Draw a cosine wave by reusing `x` from the previous example (it's already available in your session), applying `cos` and using the `plot` function:
+
+`@instructions`
+- Compute the cosine of `x` and store the resulting vector as `y`.
+- Plot these values by the original `x` values with a red line using the `x` vector from the previous exercise.
+
+`@hint`
+Apply `cos` on `x`, then `plot` it along with `x` using the `col` argument to specify `red` color. Don't forget to set the `type` of the plot to lines.
+
+`@pre_exercise_code`
+```{r}
+x <- seq(0, 4*pi, by = 0.1)
+```
+
+`@sample_code`
+```{r}
+x
+```
+
+`@solution`
+```{r}
+y <- cos(x)
+plot(x, y, col = 'red', type = 'l')
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("cos") %>% check_result() %>% check_equal()
+ex() %>% check_object("y") %>% check_equal()
+ex() %>% check_function("plot") %>% {
+  check_arg(., "x") %>% check_equal()
+  check_arg(., "y") %>% check_equal()
+  check_arg(., "col") %>% check_equal()
+  check_arg(., "type") %>% check_equal()
+}
+```
+
+---
+
+## Draw functions again
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Redraw the previous plot using the `curve` function.
+
+`@solution`
+```{r}
+curve(cos, to = 4*pi, col = 'red')
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("plot") %>% {
+  check_arg(., "to") %>% check_equal()
+  check_arg(., "col") %>% check_equal()
+}
+```
+
+---
+
+## Code syle: file names
+
+```yaml
+type: MultipleChoiceExercise
+xp: 50
+```
+
+Which of the below R script names is good? What's the problem with the other 3?
+
+`@instructions`
+- fitModels.R
+- fit-models.R
+- fit models.R
+- fit.models.R
+
+`@hint`
+Read Hadley's code style at http://adv-r.had.co.nz/Style.html
+
+`@sct`
+```{r}
+ex() %>% check_mc(correct = 2)
+```
+
+---
+
+## Code syle: object names
+
+```yaml
+type: MultipleChoiceExercise
+xp: 50
+```
+
+Which of the below R object names is good? What's the problem with the other 3?
+
+`@instructions`
+- student_summary
+- summary
+- studentSummary
+- student.summary
+
+`@hint`
+Read Hadley's code style at http://adv-r.had.co.nz/Style.html
+
+`@sct`
+```{r}
+ex() %>% check_mc(correct = 1)
+```
+
+---
+
+## Code syle: file whitespace
+
+```yaml
+type: MultipleChoiceExercise
+xp: 50
+```
+
+Which of the below R command examples is good? What's the problem with the other 3?
+
+`@instructions`
+- bmi <- weight/ height ^2
+- bmi <- weight / height*height
+- bmi = weight / (height * height)
+- bmi <- weight / (height * height)
+
+`@hint`
+Read Hadley's code style at http://adv-r.had.co.nz/Style.html
+
+`@sct`
+```{r}
+ex() %>% check_mc(correct = 4)
+```
 
