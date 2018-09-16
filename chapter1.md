@@ -285,7 +285,7 @@ curve(cos, to = 4*pi, col = 'red')
 
 `@sct`
 ```{r}
-ex() %>% check_function("plot") %>% {
+ex() %>% check_function("curve") %>% {
   check_arg(., "to") %>% check_equal()
   check_arg(., "col") %>% check_equal()
 }
