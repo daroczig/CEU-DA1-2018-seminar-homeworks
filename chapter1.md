@@ -7,6 +7,7 @@ description: 'Welcome! We will use this platform in the next few weeks for synta
 
 ```yaml
 type: MultipleChoiceExercise
+key: 583049e0db
 ```
 
 Who is one of the authors of the R programming language?
