@@ -67,6 +67,44 @@ runif(5)
 
 `@sct`
 ```{r}
-ex() %>% check_function("runif") %>%
+ex() %>% check_function("runif") %>% check_arg(., "n") %>% check_equal()
+```
+
+## Vectors
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Generate 15 random numbers between 0 and 5 and store in variable `x`.
+
+`@pre_exercise_code`
+```{r}
+set.seed(42)
+```
+
+`@sample_code`
+```{r}
+## specify a seed for the random number generator
+set.seed(42)
+
+## generate 15 random numbers between 0 and 5, then assign to x
+
+
+```
+
+`@solution`
+```{r}
+set.seed(42)
+x <- runif(15, min = 0, max = 5)
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("runif") %>% {
   check_arg(., "n") %>% check_equal()
+  check_arg(., "max")
+}
+ex() %>% check_object("x") %>% check_equal()
 ```
