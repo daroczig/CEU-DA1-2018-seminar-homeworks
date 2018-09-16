@@ -1,5 +1,5 @@
 title: CEU DA1 2018 seminar homeworks
-description: A description of the course.
+description: git@github.com:daroczig/CEU-DA1-2018-seminar-homeworks.git
 programming_language: r
 from: 'r-base-prod:v1.0.2'
 #from: 'tidyverse-base-prod:v1.0.2'

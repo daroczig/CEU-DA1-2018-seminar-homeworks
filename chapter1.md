@@ -1,64 +1,28 @@
 ---
-title: Template Chapter 1
-description: This is a template chapter.
+title: 'Week 1'
+description: 'Welcome! We will use this platform in the next few weeks for syntax-oriented homeworks, so that you can practice what we have learned in R.'
 ---
 
-## An exercise title written in sentence case
+## The author of R
 
 ```yaml
-type: NormalExercise
-lang: r
-xp: 100
-skills: 1
-key: 125ddfe6af
+type: MultipleChoiceExercise
 ```
 
-This is the Context. It should help provide students with the background information needed.
-The Instructions that follow should be in bullet point form with clear guidance for what is expected.
+Who is one of the authors of the R programming language?
 
 `@instructions`
-- Instruction 1
-- Instruction 2
-- Instruction 3
 
-`@hint`
-- Here is the hint for this setup problem. 
-- It should get students 50% of the way to the correct answer.
-- So don't provide the answer, but don't just reiterate the instructions.
-- Typically one hint per instruction is a sensible amount.
-
-`@pre_exercise_code`
-
-```{r}
-# Load datasets and packages here.
-```
-
-`@sample_code`
-
-```{r}
-# Your
-# sample
-# code
-# should
-# be
-# ideally
-# 10 lines or less,
-# with a max
-# of 16 lines.
-```
-
-`@solution`
-
-```{r}
-# Answer goes here
-# Make sure to match the comments with your sample code
-# to help students see the differences from solution
-# to given.
-```
+- Roy Co
+- Ronald McDonald
+- Ross Ihaka
 
 `@sct`
 
-```{r}
-# Update this to something more informative.
-success_msg("Some praise! Then reinforce a learning objective from the exercise.")
+```r
+msg1 <- "That's someone who makes soups."
+msg2 <- "That's a clown who likes burgers."
+msg3 <- "Correct! Head over to the next exercise!"
+ex() %>% check_mc(correct = 3,
+                  feedback_msgs = c(msg1, msg2, msg3))
 ```
