@@ -118,6 +118,7 @@ ex() %>% check_object("x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 4687bc8b73
 ```
 
 Compute the arithmetic mean of the random numbers you generated in the previous exercise. No need to recreate the `x` variable, it's already available in your session.
@@ -153,6 +154,7 @@ ex() %>% check_function("mean") %>% check_result() %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: cb55bc4f77
 ```
 
 Plot these numbers on a histogram with the main title being "Histogram of 15 random numbers"! No need to recreate the `x` variable, it's already available in your session.
@@ -188,6 +190,7 @@ ex() %>% check_function("runif") %>% check_arg(., "main") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: a442603d24
 ```
 
 Generate a sequence between `0` and `4*pi` with a step of `0.1`. Store the resulting vector as `x`.
