@@ -70,6 +70,8 @@ runif(5)
 ex() %>% check_function("runif") %>% check_arg(., "n") %>% check_equal()
 ```
 
+---
+
 ## Vectors
 
 ```yaml
