@@ -178,7 +178,7 @@ hist(x, main = "Histogram of 15 random numbers")
 
 `@sct`
 ```{r}
-ex() %>% check_function("runif") %>% check_arg(., "main") %>% check_equal()
+ex() %>% check_function("hist") %>% check_arg(., "main") %>% check_equal()
 ```
 
 ---
@@ -208,3 +208,5 @@ ex() %>% check_function("seq") %>% {
 }
 ex() %>% check_object("x") %>% check_equal()
 ```
+
+
