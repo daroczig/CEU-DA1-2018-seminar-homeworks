@@ -226,6 +226,7 @@ ex() %>% check_object("x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 00a224f72b
 ```
 
 Draw a cosine wave by reusing `x` from the previous example (it's already available in your session), applying `cos` and using the `plot` function:
@@ -272,6 +273,7 @@ ex() %>% check_function("plot") %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 945b5fb64b
 ```
 
 Redraw the previous plot using the `curve` function.
@@ -296,6 +298,7 @@ ex() %>% check_function("plot") %>% {
 ```yaml
 type: MultipleChoiceExercise
 xp: 50
+key: 5988ea7b07
 ```
 
 Which of the below R script names is good? What's the problem with the other 3?
@@ -321,6 +324,7 @@ ex() %>% check_mc(correct = 2)
 ```yaml
 type: MultipleChoiceExercise
 xp: 50
+key: fbafbeae82
 ```
 
 Which of the below R object names is good? What's the problem with the other 3?
@@ -346,6 +350,7 @@ ex() %>% check_mc(correct = 1)
 ```yaml
 type: MultipleChoiceExercise
 xp: 50
+key: 23e97f342f
 ```
 
 Which of the below R command examples is good? What's the problem with the other 3?
