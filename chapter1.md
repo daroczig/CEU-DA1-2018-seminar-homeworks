@@ -8,22 +8,21 @@ description: 'Welcome! We will use this platform in the next few weeks for synta
 ```yaml
 type: MultipleChoiceExercise
 key: 583049e0db
+xp: 50
 ```
 
-Who is one of the authors of the R programming language?
+Which R function returns the square root of a number?
 
 `@instructions`
+- square
+- root
+- sqrt
+- Sqrt
 
-- Roy Co
-- Ronald McDonald
-- Ross Ihaka
+`@hint`
+Remember, R commands are case sensitive!
 
 `@sct`
-
-```r
-msg1 <- "That's someone who makes soups."
-msg2 <- "That's a clown who likes burgers."
-msg3 <- "Correct! Head over to the next exercise!"
-ex() %>% check_mc(correct = 3,
-                  feedback_msgs = c(msg1, msg2, msg3))
+```{r}
+ex() %>% check_mc(correct = 3)
 ```
