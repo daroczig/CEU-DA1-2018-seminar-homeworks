@@ -76,6 +76,7 @@ ex() %>% check_function("runif") %>% check_arg(., "n") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: fa2a369a49
 ```
 
 Generate 15 random numbers between 0 and 5 and store in variable `x`.
