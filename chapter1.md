@@ -35,6 +35,7 @@ ex() %>% check_mc(correct = 3)
 ```yaml
 type: NormalExercise
 xp: 50
+key: 03a2bb5c40
 ```
 
 Draw 5 random numbers from the uniform distribution between 0 and 1.
