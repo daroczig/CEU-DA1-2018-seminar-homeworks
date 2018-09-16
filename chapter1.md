@@ -66,6 +66,6 @@ runif(5)
 
 `@sct`
 ```{r}
-ex() %>% check_function("runifround") %>%
+ex() %>% check_function("runif") %>%
   check_arg(., "n") %>% check_equal()
 ```
