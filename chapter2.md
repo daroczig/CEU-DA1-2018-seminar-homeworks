@@ -1,6 +1,6 @@
 ---
 title: 'Week 2'
-description: 'If you get stuck, I suggest revisiting the R sources of the <a href="https://github.com/daroczig/CEU-R-lab">"Data Analytis 1a - Exploration" class on GitHub</a>, and also feel free to check other classes on DataCamp!'
+description: 'If you get stuck, I suggest revisiting the R sources of the <a href="https://github.com/daroczig/CEU-R-lab">"Data Analytis 1a - Exploration" class on GitHub</a>, and also feel free to check other classes on DataCamp! And in case you really get stuck ... feel free to open a ticket on GitHub and ask for help.'
 ---
 
 ## Loading data
