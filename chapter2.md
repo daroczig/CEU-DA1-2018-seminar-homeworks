@@ -8,6 +8,7 @@ description: 'If you get stuck, I suggest revisiting the R sources of the <a hre
 ```yaml
 type: MultipleChoiceExercise
 xp: 50
+key: 1dd5a88e66
 ```
 
 Which R function can load a text file with comma-separated values?
@@ -33,6 +34,7 @@ ex() %>% check_mc(correct = 1)
 ```yaml
 type: NormalExercise
 xp: 50
+key: d4c6bb60e7
 ```
 
 Check the structure of the already loaded `mtcars` object!
@@ -64,6 +66,7 @@ ex() %>% check_function("str") %>% check_arg(., "object") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 50
+key: 4efeb6f04d
 ```
 
 Save the weight of the Toyota Corolla into a variable called `tcw`!
@@ -92,6 +95,7 @@ ex() %>% check_object("tcw") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 50
+key: 79d051bb76
 ```
 
 Count the number of columns in `mtcars` store in variable `mcols`!
@@ -123,6 +127,7 @@ ex() %>% check_object("mcols") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 50
+key: aac325f79b
 ```
 
 Compute the number of rows in `mtcars` with 4 gears and store in variable `m4g`!
