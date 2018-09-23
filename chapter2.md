@@ -160,6 +160,7 @@ ex() %>% check_function("nrow") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 51f53f43d8
 ```
 
 Compute the maximum weight of cars in `mtcars` with 4 gears and store in variable `x`!
@@ -189,6 +190,7 @@ ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: eb1c6ad701
 ```
 
 Compute the minimum number of carburetors of cars in `mtcars` with 4 gears and store in variable `x`!
@@ -219,6 +221,7 @@ ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: ce00feb782
 ```
 
 Compute the median of the gross horsepower of cars in `mtcars` that are heavier than 1987 lbs in variable `x`!
