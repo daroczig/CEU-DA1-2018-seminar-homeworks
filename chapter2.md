@@ -128,7 +128,6 @@ ex() %>% check_function("ncol") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
-key: aac325f79b
 ```
 
 Compute the number of rows in `mtcars` with 4 gears and store in variable `m4g`!
@@ -161,7 +160,6 @@ ex() %>% check_function("nrow") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
-key: aac325f79b
 ```
 
 Compute the maximum weight of cars in `mtcars` with 4 gears and store in variable `x`!
@@ -191,7 +189,6 @@ ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
-key: aac325f79b
 ```
 
 Compute the minimum number of carburetors of cars in `mtcars` with 4 gears and store in variable `x`!
@@ -222,7 +219,6 @@ ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
-key: aac325f79b
 ```
 
 Compute the median of the gross horsepower of cars in `mtcars` that are heavier than 1987 lbs in variable `x`!
@@ -243,4 +239,97 @@ ex() %>% check_object("x")
 ex() %>% check_object("x") %>% check_equal()
 ex() %>% check_function("median") %>% check_arg(., "x") %>% check_equal()
 ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
+```
+
+---
+
+## Summaries
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Store the weight of the heaviest car from `mtcars` in the `heavy` variable.
+
+`@sample_code`
+```{r}
+mtcars
+```
+
+`@solution`
+```{r}
+heavy <- max(mtcars$wt)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("heavy")
+ex() %>% check_object("heavy") %>% check_equal()
+ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
+```
+
+---
+
+## Something new
+
+```yaml
+type: NormalExercise
+xp: 150
+```
+
+Store the name of the heaviest car from `mtcars` in the `heavy_car` variable.
+
+`@sample_code`
+```{r}
+heavy <- max(mtcars$wt)
+mtcars
+```
+
+`@solution`
+```{r}
+heavy_car <- row.names(subset(mtcars, wt == heavy))
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("heavy")
+ex() %>% check_object("heavy_car")
+ex() %>% check_object("heavy_car") %>% check_equal()
+ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
+ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
+ex() %>% check_function("row.names") %>% check_arg(., "x") %>% check_equal()
+```
+
+---
+
+## Something newer
+
+```yaml
+type: NormalExercise
+xp: 150
+```
+
+Store the name of the heaviest car from `mtcars` in the `heavy_car` variable without using `subset` and `max`.
+
+`@sample_code`
+```{r}
+mtcars
+```
+
+`@hint`
+Have you looked up the docs of `which.max`?
+
+`@solution`
+```{r}
+heavy_car <- row.names(mtcars)[which.max(mtcars$wt)]
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("heavy")
+ex() %>% check_object("heavy_car")
+ex() %>% check_object("heavy_car") %>% check_equal()
+ex() %>% check_function("row.names") %>% check_arg(., "x") %>% check_equal()
+ex() %>% check_function("which.max") %>% check_arg(., "x") %>% check_equal()
 ```
