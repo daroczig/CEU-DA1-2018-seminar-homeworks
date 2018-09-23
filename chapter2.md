@@ -123,7 +123,7 @@ ex() %>% check_function("ncol") %>% check_arg(., "x") %>% check_equal()
 
 ---
 
-## Filtering
+## Filtering 1
 
 ```yaml
 type: NormalExercise
@@ -156,7 +156,7 @@ ex() %>% check_function("nrow") %>% check_arg(., "x") %>% check_equal()
 
 ---
 
-## Filtering
+## Filtering 2
 
 ```yaml
 type: NormalExercise
@@ -185,7 +185,7 @@ ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
 
 ---
 
-## Filtering
+## Filtering 3
 
 ```yaml
 type: NormalExercise
@@ -215,7 +215,7 @@ ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
 
 ---
 
-## Filtering
+## Filtering 4
 
 ```yaml
 type: NormalExercise
