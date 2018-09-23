@@ -146,6 +146,3 @@ m4g <- nrow(subset(mtcars, gear == 4))
 ex() %>% check_object("m4g")
 ex() %>% check_object("m4g") %>% check_equal()
 ```
-
----
-
