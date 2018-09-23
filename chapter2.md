@@ -335,7 +335,6 @@ heavy_car <- row.names(mtcars)[which.max(mtcars$wt)]
 
 `@sct`
 ```{r}
-ex() %>% check_object("heavy")
 ex() %>% check_object("heavy_car")
 ex() %>% check_object("heavy_car") %>% check_equal()
 ex() %>% check_function("row.names") %>% check_arg(., "x") %>% check_equal()
