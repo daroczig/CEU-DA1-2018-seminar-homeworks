@@ -294,6 +294,7 @@ mtcars
 
 `@solution`
 ```{r}
+heavy <- max(mtcars$wt)
 heavy_car <- row.names(subset(mtcars, wt == heavy))
 ```
 
