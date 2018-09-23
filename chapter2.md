@@ -118,6 +118,7 @@ mcols <- ncol(mtcars)
 ```{r}
 ex() %>% check_object("mcols")
 ex() %>% check_object("mcols") %>% check_equal()
+ex() %>% check_function("ncol") %>% check_arg(., "x") %>% check_equal()
 ```
 
 ---
@@ -126,7 +127,7 @@ ex() %>% check_object("mcols") %>% check_equal()
 
 ```yaml
 type: NormalExercise
-xp: 50
+xp: 100
 key: aac325f79b
 ```
 
@@ -150,4 +151,93 @@ m4g <- nrow(subset(mtcars, gear == 4))
 ```{r}
 ex() %>% check_object("m4g")
 ex() %>% check_object("m4g") %>% check_equal()
+ex() %>% check_function("nrow") %>% check_arg(., "x") %>% check_equal()
+```
+
+---
+
+## Filtering
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Compute the maximum weight of cars in `mtcars` with 4 gears and store in variable `x`!
+
+
+`@sample_code`
+```{r}
+mtcars
+```
+
+`@solution`
+```{r}
+x <- max(subset(mtcars, gear == 4)$wt)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("x")
+ex() %>% check_object("x") %>% check_equal()
+ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
+```
+
+---
+
+## Filtering
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Compute the minimum number of carburetors of cars in `mtcars` with 4 gears and store in variable `x`!
+
+
+`@sample_code`
+```{r}
+mtcars
+```
+
+`@solution`
+```{r}
+x <- min(subset(mtcars, gear == 4)$carb)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("x")
+ex() %>% check_object("x") %>% check_equal()
+ex() %>% check_function("min") %>% check_arg(., "...") %>% check_equal()
+ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
+```
+
+---
+
+## Filtering
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Compute the median of the gross horsepower of cars in `mtcars` that are heavier than 1987 lbs in variable `x`!
+
+`@sample_code`
+```{r}
+mtcars
+```
+
+`@solution`
+```{r}
+x <- median(subset(mtcars, wt > 1.987)$hp)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("x")
+ex() %>% check_object("x") %>% check_equal()
+ex() %>% check_function("median") %>% check_arg(., "x") %>% check_equal()
+ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
 ```
