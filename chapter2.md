@@ -128,6 +128,7 @@ ex() %>% check_function("ncol") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: aac325f79b
 ```
 
 Compute the number of rows in `mtcars` with 4 gears and store in variable `m4g`!
@@ -251,6 +252,7 @@ ex() %>% check_function("subset") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 4399526cc4
 ```
 
 Store the weight of the heaviest car from `mtcars` in the `heavy` variable.
@@ -279,6 +281,7 @@ ex() %>% check_function("max") %>% check_arg(., "...") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 150
+key: 841f539fb1
 ```
 
 Store the name of the heaviest car from `mtcars` in the `heavy_car` variable.
@@ -311,6 +314,7 @@ ex() %>% check_function("row.names") %>% check_arg(., "x") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 150
+key: ca970585db
 ```
 
 Store the name of the heaviest car from `mtcars` in the `heavy_car` variable without using `subset` and `max`.
