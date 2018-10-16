@@ -83,6 +83,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 199c4fca17
 ```
 
 Use the `ggplot2` package to generate a stacked barplot on the number of diamonds per the `cut` quality (x axis) and `clarity` (represented with the color of the bar section).
@@ -126,6 +127,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 9f212566d3
 ```
 
 Use the `ggplot2` package to generate a boxplot on the prices split by the `cut` quality.
@@ -166,6 +168,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 51b76be27e
 ```
 
 Use the `ggplot2` package to generate a scatterplot on the weight and the prices of the diamonds.
@@ -209,6 +212,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 9ff979b2e1
 ```
 
 Use the `ggplot2` package to generate a scatterplot on the weight and the prices of the diamonds -- just like in the previous exercise. But add a model on the top of the points as a new layer.
@@ -253,6 +257,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 671f8bc2ec
 ```
 
 Use the `ggplot2` package to generate a scatterplot with a trend line on the weight and the prices of the diamonds -- just like in the previous exercise, but add a *linear* model on the top of the points this time.
@@ -298,6 +303,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 5452e742eb
 ```
 
 Use the `ggplot2` package to generate a boxplot on the prices split by the `cut` quality -- broken down by the color of the diamonds in subplots.
@@ -344,6 +350,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 200
+key: 0f737c148e
 ```
 
 Use the `ggplot2` package to generate a barplot on the prices with a custom split.
