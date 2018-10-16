@@ -8,6 +8,7 @@ description: 'If you get stuck, I suggest revisiting the R sources of the <a hre
 ```yaml
 type: NormalExercise
 xp: 50
+key: 68ef0e987f
 ```
 
 - Load the `ggplot2` package
