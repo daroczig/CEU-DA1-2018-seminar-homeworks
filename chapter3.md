@@ -32,8 +32,6 @@ dt <- data.table(diamonds)
 
 `@sct`
 ```{r}
-ex() %>% check_function("library", index = 1) %>% check_arg("package") %>% check_equal()
-ex() %>% check_function("library", index = 2) %>% check_arg("package") %>% check_equal()
 ex() %>% check_function("str") %>% check_arg("object") %>% check_equal()
 ex() %>% check_object("dt") %>% check_equal()
 ```
