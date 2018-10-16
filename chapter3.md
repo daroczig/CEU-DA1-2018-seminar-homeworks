@@ -43,6 +43,7 @@ ex() %>% check_object("dt") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 69ec547f26
 ```
 
 Use the `ggplot2` package to generate a barplot on the number of diamonds (in the `dt` dataset) per the `cut` quality.
