@@ -313,3 +313,43 @@ ex() %>% {
   check_function(., "geom_bar")
 }
 ```
+
+
+---
+
+## A Boxplot
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Use the `ggplot2` package to generate a boxplot on the air time split by the `origin` categories.
+
+`@pre_exercise_code`
+```{r}
+library(data.table); library(nycflights13); dt <- data.table(flights); library(ggplot2)
+```
+
+`@sample_code`
+```{r}
+dt
+```
+
+`@solution`
+```{r}
+ggplot(dt, aes(origin, air_time)) + geom_boxplot()
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(., "aes") %>% {
+    check_arg(., "x") %>% check_equal(eval = FALSE) 
+    check_arg(., "y") %>% check_equal(eval = FALSE) 
+  }
+  check_function(., "geom_boxplot")
+}
+```
+
