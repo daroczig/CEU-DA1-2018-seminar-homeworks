@@ -305,7 +305,6 @@ ggplot(dt, aes(origin)) + geom_bar()
 
 `@sct`
 ```{r}
-ex() %>% check_function("library") %>% check_arg("package") %>% check_equal()
 ex() %>% {
   check_function(., "ggplot") %>% check_arg("data") %>% check_equal()
   check_function(., "aes") %>% {
