@@ -283,6 +283,7 @@ ex() %>% check_object("res") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 1e38da7d28
 ```
 
 Use the `ggplot2` package to generate a barplot on the number of flights (in the `dt` dataset) per the origin airport.
