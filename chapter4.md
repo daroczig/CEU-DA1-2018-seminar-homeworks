@@ -322,6 +322,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 970bbf104c
 ```
 
 Use the `ggplot2` package to generate a boxplot on the air time split by the `origin` categories.
