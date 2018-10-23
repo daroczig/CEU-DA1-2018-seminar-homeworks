@@ -290,7 +290,7 @@ Use the `ggplot2` package to generate a barplot on the number of flights (in the
 
 `@pre_exercise_code`
 ```{r}
-library(data.table); library(nycflights13); dt <- data.table(flights)
+library(data.table); library(nycflights13); dt <- data.table(flights); library(ggplot2)
 ```
 
 `@sample_code`
@@ -300,7 +300,6 @@ dt
 
 `@solution`
 ```{r}
-library(ggplot2)
 ggplot(dt, aes(origin)) + geom_bar()
 ```
 
@@ -314,5 +313,3 @@ ex() %>% {
   check_function(., "geom_bar")
 }
 ```
-
-
