@@ -353,3 +353,134 @@ ex() %>% {
 }
 ```
 
+
+
+---
+
+## A Scatterplot
+
+```yaml
+type: NormalExercise
+xp: 200
+```
+
+Create a new object called `dtsummaries` that includes the average distance and air time of flights split by destination and origin airports. The column names should be: `dest`, `origin`, `distance` and `air_time`. Then pass this new object to `ggplot2` and generate a scatterplot on the average distances and air times.
+
+`@pre_exercise_code`
+```{r}
+library(data.table); library(nycflights13); dt <- data.table(flights); library(ggplot2)
+```
+
+`@sample_code`
+```{r}
+dt
+```
+
+`@solution`
+```{r}
+dtsummaries <- dt[, .(distance = mean(distance, na.rm = TRUE), 
+                      air_time = mean(air_time, na.rm = TRUE)), 
+                  by = list(dest, origin)]
+ggplot(dtsummaries, aes(distance, air_time)) + geom_point()
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("mean") %>% check_arg("na.rm") %>% check_equal()
+ex() %>% check_object("dtsummaries") %>% check_equal()
+ex() %>% {
+  check_function(., "ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(., "aes") %>% {
+    check_arg(., "x") %>% check_equal(eval = FALSE) 
+    check_arg(., "y") %>% check_equal(eval = FALSE) 
+  }
+  check_function(., "geom_point")
+}
+```
+
+
+
+---
+
+## Fitting model
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+The `dtsummaries` object is still available in your workspace from the previous exercise. Now use the `ggplot2` package to generate a scatterplot on the distance and the air time of the flights -- just like in the previous exercise, but *add a model* on the top of the points as a new layer.
+
+`@hint`
+After specifying the `geom_point()` layer, use the `geom_smooth` function as well.
+
+`@pre_exercise_code`
+```{r}
+library(data.table); library(nycflights13); dt <- data.table(flights); library(ggplot2)
+dtsummaries <- dt[, .(distance = mean(distance), air_time = mean(air_time, na.rm = TRUE)), by = list(dest, origin)]
+```
+
+`@sample_code`
+```{r}
+dtsummaries
+```
+
+`@solution`
+```{r}
+ggplot(dtsummaries, aes(distance, air_time)) + geom_point() + geom_smooth()
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(., "aes") %>% {
+    check_arg(., "x") %>% check_equal(eval = FALSE) 
+    check_arg(., "y") %>% check_equal(eval = FALSE) 
+  }
+  check_function(., "geom_smooth")
+}
+```
+
+
+---
+
+## Faceting
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Use the `ggplot2` package to generate a boxplot on the air time split by the origin airport -- broken down by the flight carrier in subplots using facets.
+
+`@hint`
+Use `facet_wrap` to split into subplots.
+
+`@pre_exercise_code`
+```{r}
+library(data.table); library(nycflights13); dt <- data.table(flights); library(ggplot2)
+```
+
+`@sample_code`
+```{r}
+dt
+```
+
+`@solution`
+```{r}
+ggplot(dt, aes(origin, air_time)) + geom_boxplot() + facet_wrap(~carrier)
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(., "aes") %>% {
+    check_arg(., "x") %>% check_equal(eval = FALSE) 
+    check_arg(., "y") %>% check_equal(eval = FALSE) 
+  }
+  check_function(., "geom_boxplot")
+  check_function(., "geom_wrap")
+}
+```
+
