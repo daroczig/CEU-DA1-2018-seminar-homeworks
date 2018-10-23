@@ -275,3 +275,40 @@ ex() %>% check_function("min") %>% check_arg("na.rm") %>% check_equal()
 ex() %>% check_object("res") %>% check_equal()
 ```
 
+
+---
+
+## A Barplot
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+Use the `ggplot2` package to generate a barplot on the number of flights (in the `dt` dataset) per the origin airport.
+
+`@pre_exercise_code`
+```{r}
+library(data.table); library(nycflights13); dt <- data.table(flights); library(ggplot2)
+```
+
+`@sample_code`
+```{r}
+dt
+```
+
+`@solution`
+```{r}
+ggplot(dt, aes(origin)) + geom_bar()
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "ggplot") %>% check_arg("data") %>% check_equal()
+  check_function(., "aes") %>% {
+    check_arg(., "x") %>% check_equal(eval = FALSE) 
+  }
+  check_function(., "geom_bar")
+}
+```
