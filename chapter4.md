@@ -42,6 +42,7 @@ ex() %>% check_object("dt") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: ff104da3a7
 ```
 
 Count the number or rows in the `dt` object and store in the `n` variable!
@@ -74,6 +75,7 @@ ex() %>% check_object("n") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 5744f0ec3a
 ```
 
 Count the number of flights in the `dt` dataset starting from `JFK` and store the result in the `n` variable! Note, that `dt` is already available in the workspace, no need to create it or load `data.table`.
@@ -108,6 +110,7 @@ ex() %>% check_object("n") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: e876be0168
 ```
 
 Count the number of flights per `origin` and store the resulting object in the `n` variable! Please use the `data.table` approach instead of the `table` command to solve this exercise.
@@ -139,6 +142,7 @@ ex() %>% check_object("n") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: 21de93a8b6
 ```
 
 Count the number of flights in the `dt` dataset starting from `JFK` and heading to `LAX`, and store the result in the `n` variable! 
@@ -170,6 +174,7 @@ ex() %>% check_object("n") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: ce02261cf4
 ```
 
 Compute the average air time of flights in the `dt` dataset leaving from `JFK` to `LAX`, and store the result in the `n` variable! 
@@ -205,6 +210,7 @@ ex() %>% check_object("n") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: c9e11e6fb2
 ```
 
 Compute the minimum and the maximum distances of flights in the `dt` dataset split by the origin airport, and store the result in the `n` variable! The resulting `data.table` object should have the following column names: `origin`, `min` and `max`, and store it in the `res` variable.
@@ -239,6 +245,7 @@ ex() %>% check_object("res") %>% check_equal()
 ```yaml
 type: NormalExercise
 xp: 100
+key: a1f74e6bb0
 ```
 
 Compute the minimum, the (arithmetic) average, the standard deviation and the max of the air time of flights in the `dt` dataset split by the origin airport, and store the result in the `res` variable! The resulting `data.table` object should have the following column names: `airport`, `min`, `avg`, `stddev` and `max`.
