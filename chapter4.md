@@ -481,7 +481,6 @@ ex() %>% {
     check_arg(., "y") %>% check_equal(eval = FALSE) 
   }
   check_function(., "geom_boxplot")
-  check_function(., "geom_wrap")
+  check_function(., "facet_wrap")
 }
 ```
-
