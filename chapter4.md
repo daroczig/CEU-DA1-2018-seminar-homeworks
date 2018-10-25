@@ -363,6 +363,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 200
+key: 89f45149ec
 ```
 
 Create a new object called `dtsummaries` that includes the average distance and air time of flights split by destination and origin airports. The column names should be: `dest`, `origin`, `distance` and `air_time`. Then pass this new object to `ggplot2` and generate a scatterplot on the average distances and air times.
@@ -408,6 +409,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 409e3b6353
 ```
 The `dtsummaries` object is still available in your workspace from the previous exercise. Now use the `ggplot2` package to generate a scatterplot on the distance and the air time of the flights -- just like in the previous exercise, but *add a model* on the top of the points as a new layer.
 
@@ -450,6 +452,7 @@ ex() %>% {
 ```yaml
 type: NormalExercise
 xp: 100
+key: 72646ca956
 ```
 
 Use the `ggplot2` package to generate a boxplot on the air time split by the origin airport -- broken down by the flight carrier in subplots using facets.
